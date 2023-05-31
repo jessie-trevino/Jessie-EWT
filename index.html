@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="myButton">Alert Text</button>
+    <ul class="myList">
+        <li>USS Abraham Lincoln; CVN 72</li>
+        <li>USS Gerald Ford; CVN 78</li>
+        <li>USS Ronald Regan; CVN 76</li>
+        <li>USS George W Bush; CVN 77</li>
+        <li>USS Harry S Thurman; CVN 75</li>
+        <li>USS Enterprise; CVN 65</li>        
+    </ul>
+    <button id="animate">Animate the Box!</Box!>
+    <div 
+        id="myBox"
+        style="
+        background-color: green;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        margin-top: 15px;
+        "
+    ></div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous">
+    </script>
+    <script>
+    //$(document).ready(function(){
+    $(function(){
+        $("#myButton").on("click", function() {
+            alert("Hello Everyone!!");
+            $("h1").css("color", "blue");
+        });
+         $(".myList li").each(function(index){
+            console.log(index + ": " + $(this).text());
+        });
+
+    $("#animate").on("click", function (index) {
+        $("#myBox").animate({left: "500px" }, "slow", function(){
+            alert("Complete!");
+        });
+    });
+});
+    </script>
+</body>
+</html>
